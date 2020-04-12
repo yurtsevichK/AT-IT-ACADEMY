@@ -7,6 +7,7 @@ public enum TestLevel {
     public int COMPLEXITY;
 
     TestLevel(int COMPLEXITY) {
+
         this.COMPLEXITY = COMPLEXITY;
     }
 
