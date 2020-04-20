@@ -10,9 +10,9 @@ import org.junit.Test;
 public class AutomatedTestFailed {
     @Test
     public void automatedTestFailed(){
-        AutomatedTest automatedTest = new AutomatedTest(TestLevel.GUI,12);
+        AutomatedTest automatedTest = new AutomatedTest(TestLevel.GUI,10);
         AutomationEngineer automationEngineer = new AutomationEngineer();
-        Assert.assertEquals("AutomationTest, GUI(9), instability 12", Result.FAILED, automatedTest.apply(automationEngineer));
+        Assert.assertEquals("AutomationTest, GUI(9), instability 10", Result.FAILED, automatedTest.apply(automationEngineer));
 
     }
 }
