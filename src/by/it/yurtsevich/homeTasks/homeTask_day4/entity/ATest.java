@@ -6,7 +6,7 @@ import by.it.yurtsevich.homeTasks.homeTask_day4.worker.TestEngineer;
 
 import java.util.function.Function;
 
-public abstract class Test implements Function<Engineer, Result> {
+public abstract class ATest implements Function<Engineer, Result> {
     int complexity;
     int instability;
 
@@ -31,7 +31,7 @@ public abstract class Test implements Function<Engineer, Result> {
 
     }
 
-    public Test(TestLevel testLevel, int instability) {
+    public ATest(TestLevel testLevel, int instability) {
         this.complexity = testLevel.COMPLEXITY;
         this.setInstability(instability);
     }
@@ -45,9 +45,9 @@ public abstract class Test implements Function<Engineer, Result> {
         } else {
             anxiety = 1;
         }
-        if ((complexity * instability * anxiety) / engineer.getSkill() >30){
+        if ((complexity * instability * anxiety) / engineer.getSkill() > 30) {
             return Result.FAILED;
-        } else{
+        } else {
             return Result.PASSED;
         }
     }
